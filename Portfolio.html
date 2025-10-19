@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ayan Ray Halder — Portfolio</title>
+  <meta name="description" content="Portfolio — Ayan Ray Halder. Frontend developer / Designer / Creator." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#0f1724; --card:#0b1220; --accent:#6ee7b7; --muted:#94a3b8; --glass: rgba(255,255,255,0.04);
+      --max-width:1100px; --radius:14px;
+      font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;}
+    body{
+      margin:0; background:linear-gradient(180deg,#071029 0%, #071725 60%); color:#e6eef6; -webkit-font-smoothing:antialiased;
+      line-height:1.45; padding:32px 20px; display:flex; justify-content:center;
+    }
+    .wrap{width:100%; max-width:var(--max-width);}
+
+    header{display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:28px}
+    .brand{display:flex; gap:12px; align-items:center}
+    .logo{width:48px; height:48px; border-radius:12px; background:linear-gradient(135deg,var(--accent),#60a5fa); display:grid; place-items:center; font-weight:700; color:#06202a}
+    nav{display:flex; gap:18px; align-items:center}
+    nav a{color:var(--muted); text-decoration:none; padding:8px 12px; border-radius:10px; font-weight:600}
+    nav a:hover{color:var(--accent); background:rgba(255,255,255,0.02)}
+    .cta{background:linear-gradient(90deg,var(--accent),#60a5fa); color:#06202a; padding:8px 14px; border-radius:10px; font-weight:700}
+
+    .hero{display:grid; grid-template-columns:1fr; gap:28px; align-items:start; margin-bottom:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent); border-radius:var(--radius); padding:22px}
+    .intro h1{margin:0 0 8px 0;font-size:28px}
+    .intro p{color:var(--muted); margin:0 0 18px}
+    .actions{display:flex; gap:12px}
+    .btn{padding:10px 14px; border-radius:10px; font-weight:700; text-decoration:none}
+    .btn-outline{border:1px solid rgba(255,255,255,0.06); color:var(--muted); background:transparent}
+
+    .grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .project{background:var(--card); padding:12px; border-radius:12px; transition:transform .18s ease, box-shadow .18s ease}
+    .project:hover{transform:translateY(-6px); box-shadow:0 10px 30px rgba(2,6,23,0.6)}
+    .project img{width:100%; height:140px; object-fit:cover; border-radius:8px}
+    .project h3{margin:10px 0 6px 0; font-size:16px}
+    .project p{margin:0; color:var(--muted); font-size:13px}
+
+    .two-cols{display:grid; grid-template-columns:1fr 1fr; gap:16px}
+    ul.skills{list-style:none; padding:0; margin:0; display:flex; gap:10px; flex-wrap:wrap}
+    ul.skills li{background:var(--glass); padding:8px 10px; border-radius:8px; color:var(--muted); font-weight:600}
+
+    footer{margin-top:28px; color:var(--muted); font-size:14px; display:flex; justify-content:space-between; align-items:center}
+
+    @media (max-width:980px){
+      .grid{grid-template-columns:repeat(2,1fr)}
+    }
+    @media (max-width:640px){
+      body{padding:18px}
+      .grid{grid-template-columns:1fr}
+      nav{display:none}
+      header{align-items:flex-start}
+    }
+
+    .muted{color:var(--muted)}
+    .tag{font-size:12px; color:var(--muted); background:rgba(255,255,255,0.02); padding:6px 8px; border-radius:999px}
+
+    a:focus{outline:2px dashed var(--accent); outline-offset:3px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="logo">AR</div>
+        <div>
+          <div style="font-weight:800">Ayan Ray Halder</div>
+          <div style="font-size:13px;color:var(--muted)">Frontend Developer • Designer</div>
+        </div>
+      </div>
+
+      <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="card intro">
+          <h1>Hello — I'm Ayan Ray Halder.</h1>
+          <p>I build beautiful, accessible web interfaces. I focus on performance, delightful micro-interactions and pragmatic design systems.</p>
+          <div class="actions">
+            <a class="btn" href="#projects">See Projects →</a>
+            <a class="btn btn-outline" href="#contact">Hire / Contact</a>
+          </div>
+
+          <div style="margin-top:20px; display:flex; gap:10px; align-items:center; flex-wrap:wrap">
+            <span class="tag">Available for freelance</span>
+            <span class="tag">Open to remote</span>
+            <span class="tag">Based in India</span>
+          </div>
+
+          <section id="about" style="margin-top:20px">
+            <h2 style="margin-bottom:8px">About</h2>
+            <p class="muted">I'm a product-minded frontend developer with experience shipping responsive apps and design systems. I enjoy turning complex problems into simple, elegant solutions.</p>
+          </section>
+        </div>
+      </section>
+
+      <section id="projects" style="margin-bottom:22px">
+        <h2 style="margin:0 0 12px 0">Featured Projects</h2>
+        <div class="grid">
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1509228627159-645c0b7d3a6d?w=1000&q=60&auto=format&fit=crop&s=placeholder" alt="Project screenshot">
+            <h3>Project One</h3>
+            <p class="muted">A design system + component library for modern SaaS apps.</p>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1485217988980-11786ced9454?w=1000&q=60&auto=format&fit=crop&s=placeholder" alt="Project screenshot">
+            <h3>Project Two</h3>
+            <p class="muted">Performance-first landing page with accessible UI patterns.</p>
+          </article>
+
+          <article class="project">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1000&q=60&auto=format&fit=crop&s=placeholder" alt="Project screenshot">
+            <h3>Project Three</h3>
+            <p class="muted">Interactive data-visualization dashboard built with charts.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="two-cols" id="skills" style="margin-bottom:18px">
+        <div class="card">
+          <h2 style="margin-top:0">Skills</h2>
+          <ul class="skills" aria-label="Skills list">
+            <li>HTML</li><li>CSS</li><li>JavaScript</li><li>React</li><li>Accessibility</li><li>Design Systems</li>
+          </ul>
+
+          <div style="margin-top:12px;"><strong class="muted">Tools:</strong> Figma • VS Code • Git • Vercel</div>
+        </div>
+
+        <div class="card">
+          <h2 style="margin-top:0">Contact</h2>
+          <p class="muted">Want to work together or just say hi? Send a short message — I'll reply within a day.</p>
+
+          <form action="mailto:ayanrayhalder@example.com" method="post" enctype="text/plain" style="display:flex; flex-direction:column; gap:8px; margin-top:12px">
+            <input name="name" placeholder="Your name" aria-label="Your name" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit" required>
+            <input type="email" name="email" placeholder="Email" aria-label="Email" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit" required>
+            <textarea name="message" placeholder="Message" rows="4" style="padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04); background:transparent; color:inherit" required></textarea>
+            <div style="display:flex; gap:8px">
+              <button type="submit" class="btn cta">Send</button>
+              <a class="btn btn-outline" href="#">Download Resume</a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div>© <strong>Ayan Ray Halder</strong> — <span class="muted">Built with ♥</span></div>
+      <div class="muted">Follow • LinkedIn • GitHub</div>
+    </footer>
+  </div>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link=>{
+      link.addEventListener('click', e=>{
+        const target = document.querySelector(link.getAttribute('href'));
+        if(target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
+      });
+    });
+  </script>
+</body>
+</html>
